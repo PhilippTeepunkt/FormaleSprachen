@@ -18,6 +18,8 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage[T1]{fontenc}
+\usepackage{qtree}
+\usepackage{multicol}
 
 %Theorems
 \newtheorem{thm}{Theorem}[section]
@@ -48,8 +50,60 @@
 
     \newpage
     \section*{Aufgabe 1:}
+    \subsection*{1.}
     \begin{normalsize}
-        bla bla bla
+        G(V,T,P,S)\\
+        V = {S,A,B,C,D}\\
+        T = {0,1}\\
+
+        \includegraphics[width=0.8\textwidth]{Aufgabe1_1.png}
+
+        \noindent
+        Produktionsbeispiele:\\
+        \begin{multicols}{2}
+
+            \noindent
+            0\\
+            00\\
+            000 \hspace{15mm} Rest: 0\\
+            ... \\
+
+            \noindent
+            0\\
+            0101 \rightarrow 5\\
+            0101101 \rightarrow 45 \hspace{10mm} Rest: 0\\
+            011001 \rightarrow 25\\
+
+        \end{multicols}
+        Bei dem Betrachten der Produktion aller Binärwörter der Sprache L(G) fällt auf, dass
+        sobald eine Null angehangen wird, sich der Wert verdoppelt und wir wissen, dass wenn ein Wort
+        durch 5 teilbar ist, das Doppelte (der doppelte Wert) ebenfals durch 5 teilbar ist.
+        Alternativ kann ein Wort der Sprache auch auf Eins (Verdopplung+1) terminieren, jedoch muss hierbei nach den
+        Produktionsregeln eine 0 vorausgehen (0B). \\
+        \vspace{10mm}
+        IA: für Wortlänge 1 -> terminiert bei 0 \rightarrow \hspace{2mm} $0\mod5=0$\\
+        IV: alle Worte beliebiger Wortlänge(n+1) befinden sich in der selben Restklasse\\
+        IS: (noch nicht fertig)
     \end{normalsize}
 
+    \subsection*{2.}
+    \begin{normalsize}
+         -> Aus A1 gilt, dass nur Binärzahlen/Worte terminieren, die mod 5=0 ergeben.\\
+         -> In jedem Schritt kann eine 1 oder eine 0, also alle Elemente unseres Alphabets,
+            hinzugefügt werden.\\
+            Daraus folgt, dass alle Binärzahlen darstellbar sind, mit der Einschränkung Nichtterminalen am Ende stehen zu haben.\\
+            Aus unserer Bedingung aus A1 wissen wir, dass nur Worte mod 5=0 terminieren und ein gültiges Wort bilden.\\
+            Also sind alle binären Zeichenketten, welche als Binärzahl interpretiert eine durch 5 teilbare Zahl darstellen, in unserer Sprache L(G).
+    \end{normalsize}
+
+    \newpage
+    \section*{Aufgabe 2:}
+    \subsection*{1.}
+    \begin{normalsize}
+
+    \end{normalsize}
+    \subsection*{2.}
+    \begin{normalsize}
+
+    \end{normalsize}
 \end{document}

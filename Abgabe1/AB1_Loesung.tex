@@ -76,14 +76,24 @@
 
         \end{multicols}
         Bei dem Betrachten der Produktion aller Binärwörter der Sprache L(G) fällt auf, dass
-        sobald eine Null angehangen wird, sich der Wert verdoppelt und wir wissen, dass wenn ein Wort
-        durch 5 teilbar ist, das Doppelte (der doppelte Wert) ebenfals durch 5 teilbar ist.
-        Alternativ kann ein Wort der Sprache auch auf Eins (Verdopplung+1) terminieren, jedoch muss hierbei nach den
-        Produktionsregeln eine 0 vorausgehen (0B). \\
-        \vspace{10mm}
+        sobald eine Null angehangen wird, sich der binär interpretierte Wert verdoppelt und wir wissen, dass wenn ein Wort
+        durch 5 teilbar ist, das Doppelte (der doppelte Wert) ebenfals durch 5 teilbar ist.\\
+        Alternativ kann ein Wort der Sprache auch auf Eins (Verdopplung+1) terminieren, also über B. \\
+        Terminiert ein Wort nicht, stellen wir fest, dass jeder Nichtterminalen ein Rest-Wert zugewiesen werden kann,
+        für die binärinterpretierte Zeichenfolge vor der Variablen &\mod 5$.
+        \vspace{5cm}\\
         IA: für Wortlänge 1 -> terminiert bei 0 \rightarrow \hspace{2mm} $0\mod5=0$\\
-        IV: alle Worte beliebiger Wortlänge(n+1) befinden sich in der selben Restklasse\\
-        IS: (noch nicht fertig)
+        IV: alle Worte beliebiger Wortlänge(n+1) befinden sich in \\ der selben Restklasse $a \mod 5$
+        \\IS:\\
+        \hspace{2cm}S -> Rest 0 : $S\mod5=0$,$101S\mod5=0$, ...\\
+        \hspace{2cm}A -> Rest 1 : $1A\mod5 = 1$, $110A\mod5=1$, ...\\
+        \hspace{2cm}B -> Rest 2 : $10B\mod5=2$,$111B\mod5=2$, ...\\
+        \hspace{2cm}C -> Rest 3 : $11C\mod5=3$,$1000C\mod5=3$, ...\\
+        \hspace{2cm}D -> Rest 4 : $100D\mod5=4$,$1001D\mod5=4$, ...\\
+        -> terminiert ein Wort, dann bei S mit 0 oder B mit 1. S->Rest 0,\\ B mit 1 ->Rest 2 Verdopplung + 1.\\
+        => nur Worte binär interpretiert $\mod 5$ terminieren.
+
+
     \end{normalsize}
 
     \subsection*{2.}
